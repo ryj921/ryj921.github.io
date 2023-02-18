@@ -171,7 +171,7 @@
         <div class="logo-name">Roche&#39;s blog</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Documenting my growth, and may you have a nice day!
             
         </div>
     </div>
@@ -422,9 +422,12 @@
 <p>**g++**：g++是gcc的c++编译器</p>
 <p><strong>MinGW</strong>：MinGW全称是Minimalist GNU for Windows。顾名思义，MinGW实质上是GNU在windows系统的一个移植版本。所谓minimalist，就是指<strong>这个移植版本只包含针对C&#x2F;C++的编译器工具集</strong>。此外，类似的移植版本还有cygwin和Djgpp，这里不做介绍。</p>
 <h1 id="chapter-2-VScode"><a href="#chapter-2-VScode" class="headerlink" title="chapter 2 - VScode"></a>chapter 2 - VScode</h1><ol>
-<li>下载和安装：官网免费下载，安装时选择添加到path；</li>
-<li>汉化：安装后在VSCode扩展中安装Chinese插件</li>
-<li>C&#x2F;C++相关部分：<blockquote>
+<li><p>下载和安装：官网免费下载，安装时选择添加到path；</p>
+</li>
+<li><p>汉化：安装后在VSCode扩展中安装Chinese插件</p>
+</li>
+<li><p>C&#x2F;C++相关部分：</p>
+<blockquote>
 <p>I. VSCode扩展安装C&#x2F;C++插件和code runner插件；后者需要设置ignore selection 和  run in terminal<br>II. 本机安装和配置MinGW:</p>
 <blockquote>
 <p>下载时，官网选择x86_64-posix-seh，本地解压即可；解压时我使用的软件是7-zip;<br>在系统变量的path中添加mingw主目录中的bin和include；<br>cmd测试安装配置结果：gcc -v -E -x c++ -</p>
@@ -432,13 +435,17 @@
 <p>III. 在VSCode的工程项目中新建一个.vscode文件(后续代码源文件也放在此.vscode文件中)，然后在此文件中添加三个配置文件：c_cpp_propertise.json、launch.json、tasks.json。注意修改其中的路径为本机安装的mingw的gcc或g++下设的相应文件，gcc针对C项目，g++针对C++项目。（配置文件的具体内容保存在本地了，这里不展开）<br>IV.注意事项：win的路径复制下来是\，会被当作转义符处理，在VSCode中配置路径时要改为\或者&#x2F;，这一点是VSCode配置中常见的错误。</p>
 </blockquote>
 </li>
-<li>运行&#x2F;调试：右上角Run Code&#x2F;其他相应选项</li>
-<li>关于VScode的json文件中无法添加注释的问题：<blockquote>
+<li><p>运行&#x2F;调试：右上角Run Code&#x2F;其他相应选项</p>
+</li>
+<li><p>关于VScode的json文件中无法添加注释的问题：</p>
+<blockquote>
 <p>在JSON中，使用以下两种方式来表示数据：<br>I. Object（对象）：键值对的集合，使用花括号{ }定义。在每个键值对中，以键开头，后跟一个冒号，最后是值。多个键值对之间使用逗号,分隔，例如{“name”:”blog”,”url”:”xx.xx.xx”}；<br>II. Array（数组）：值的有序集合，使用方括号[ ]定义，数组中每个值之间使用逗号进行分隔。<br>VSCode中如果想在json文件加注释，可以将底部蓝色状态栏中的语言模式设置为Json with Comments；</p>
 </blockquote>
 </li>
-<li>字体间距变大问题解决：terminal.integrated.fontFamily设置为monospace</li>
-<li>VSCode实用插件<blockquote>
+<li><p>字体间距变大问题解决：terminal.integrated.fontFamily设置为monospace</p>
+</li>
+<li><p>VSCode实用插件</p>
+<blockquote>
 <p><strong>markdown preview enhanced</strong>：编写markdown，上方状态栏打开侧边预览即可边写边预览<br><strong>partial diff</strong>：查看代码差异，选中一段后右键select text for cmp，再选中另一段cmp with previous<br><strong>markmap</strong>：绘制思维导图；类似markdown的语法，用’#’控制即可；上方状态栏open as markmap查看效果；</p>
 </blockquote>
 </li>
@@ -460,7 +467,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">Yujia Rong</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -483,7 +490,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">Yujia Rong</a>
                     !
                 </span>
             </div>
@@ -610,7 +617,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            Yujia Rong
                             
                         </span>
                     </div>
@@ -647,7 +654,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            Yujia Rong
                             
                         </span>
                     </div>
@@ -839,7 +846,7 @@
             
                 <span id="year">2023</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">Yujia Rong</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             

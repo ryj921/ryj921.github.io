@@ -45,8 +45,6 @@
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
-    
 
 
 
@@ -337,7 +335,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                Welcome to my world
+                Welcome to my world ^_^
                 
             </div>
 
@@ -349,15 +347,17 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "He said go venture far beyond the shores, don&#39;t forsake this life of yours.",
                             
-                                "Never really desperate, only the lost of the soul",
+                                "When you get older, your wild heart will live for younger days.",
+                            
+                                "One day you will leave this world behind, so live a life you will remember.",
                             
                         ],
-                        startDelay: 300,
-                        typeSpeed: 100,
+                        startDelay: 100,
+                        typeSpeed: 60,
                         loop: true,
-                        backSpeed: 50,
+                        backSpeed: 5,
                         showCursor: true
                     });
                 </script>
@@ -369,9 +369,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
 </script>
 
 
@@ -761,7 +759,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura-half.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura-small.js"><\/script>');
             }
         </script>
     

@@ -45,8 +45,6 @@
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
-    
 
 
 
@@ -420,20 +418,27 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="HEXO-使用"><a href="#HEXO-使用" class="headerlink" title="HEXO-使用"></a>HEXO-使用</h2><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+                <h2 id=""><a href="#" class="headerlink" title=""></a></h2><p>测试：<br><img src="/test.png" alt="pictureTest" title="test"></p>
+<h2 id="HEXO-使用"><a href="#HEXO-使用" class="headerlink" title="HEXO-使用"></a>HEXO-使用</h2><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>To create a new post (or page, draft), post is the default layout, but you can supply your own. You can change the default layout by editing the default_layout setting in _config.yml<br>注：hexo new会依据选定的模板生成一个文件夹，文件夹内自动产生一个模板格式的md。例如我的博客中categorise目录下的index.md文件。</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Initialize-Hexo-Directory"><a href="#Initialize-Hexo-Directory" class="headerlink" title="Initialize Hexo Directory"></a>Initialize Hexo Directory</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo init <span class="token punctuation">[</span>root<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>注：不指定 root 时将当前目录视为 root 并进行初始化，指定 root 会创建并初始化 hexo 博客根目录。</p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>Generating static files with Hexo is quite easy and fast.<br>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server <span class="token punctuation">[</span>-i<span class="token punctuation">]</span><span class="token punctuation">[</span>-p<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>注：In static mode（default）, only files in the public folder will be served and file watching is disabled. You have to run hexo generate before starting the server. Usually used in production.</p>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>注：需要先配置好git，并安装hexo的git插件：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>此外，还需要修改博客根目录下的_config.yml文件:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
   type: <span class="token function">git</span>
@@ -520,6 +525,7 @@ tags: <span class="token punctuation">[</span>hexo, markdown, theme-matery<span 
 keywords: 
 reprintPolicy: cc_by
 ---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>配置说明：</p>
 <blockquote>
 <p>title、date建议每次都设定；date 建议每篇文章唯一，因为本主题的<code>Gitalk</code>和<code>Gitment</code>是以date作为唯一标识<code>id</code>的。<br>img 表示这篇博客在网站上的封面，如果不设置则会根据标题的<code>hashCode</code>取余，然后从默认文件中选取；(\medias\featureimages中的图)<br>top 表示是否置顶；<br>hide 表示是否隐藏；<br>cover 表示是否添加到网站顶部的循环滚动栏；<br>coverImg 表示滚动栏此页的背景图，不设置默认用此博客的featureImage；<br>password 需要先使用<code>SHA256</code>加密，否则可以通过查看源代码获取此密码；<br>toc 是博客页内导航栏，建议开启；<br>mathjax 受hexo支持，不添加Latex数学公式时建议关闭，以减少渲染时间；<br>summary 是文章在封面显示的摘要内容，不设置则默认摘取一段；<br>categories 在写每篇文章时自己设定，本主题根据此项来分类，并使用配置好的categories功能；分类具有顺序性和层次性，即区分父分类和子分类。例如<code>[A, B]</code>不等于<code>[B, A]</code>；<br>tag 为文章添加标签，与categories不同，标签没有顺序和层次性；<br>keyword 关键字；<br>reprintPolicy 知识共享许可协议(Creative Commons license)，又叫<code>CC协议</code>，是一种允许他人分发作品的公共版权许可。cc_by是使用最自由的一种协议，一般就用这个；</p>
@@ -556,7 +562,7 @@ reprintPolicy: cc_by
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://ryj921.github.io/2023/02/18/Operation%20Brochure/">http://ryj921.github.io/2023/02/18/Operation%20Brochure/</a>
+                    <a href="http://ryj921.github.io/2023/02/18/Operation-Brochure/">http://ryj921.github.io/2023/02/18/Operation-Brochure/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -625,39 +631,6 @@ reprintPolicy: cc_by
                 </div>
             </div>
             
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
         </div>
     </div>
 
@@ -687,7 +660,7 @@ reprintPolicy: cc_by
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/2023/02/18/Operation%20Brochure/">
+                <a href="/2023/02/18/Operation-Brochure/">
                     <div class="card-image">
                         
                         <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Operation Brochure">
@@ -780,6 +753,43 @@ reprintPolicy: cc_by
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Roche&#39;s blog<br />'
+            + 'Author: Yujia Rong<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1186,7 +1196,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura-half.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura-small.js"><\/script>');
             }
         </script>
     

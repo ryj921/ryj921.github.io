@@ -45,8 +45,6 @@
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
-    
 
 
 
@@ -344,7 +342,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                Welcome to my world
+                Welcome to my world ^_^
                 
             </div>
 
@@ -356,15 +354,17 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "从来没有真正的绝境, 只有心灵的迷途",
+                                "He said go venture far beyond the shores, don&#39;t forsake this life of yours.",
                             
-                                "Never really desperate, only the lost of the soul",
+                                "When you get older, your wild heart will live for younger days.",
+                            
+                                "One day you will leave this world behind, so live a life you will remember.",
                             
                         ],
-                        startDelay: 300,
-                        typeSpeed: 100,
+                        startDelay: 100,
+                        typeSpeed: 60,
                         loop: true,
-                        backSpeed: 50,
+                        backSpeed: 5,
                         showCursor: true
                     });
                 </script>
@@ -376,9 +376,7 @@
 
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $('.bg-cover').css('background-image', 'url(/medias/banner/6.jpg)');
 </script>
 
 
@@ -417,7 +415,7 @@
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="/medias/avatar.jpg" alt="Yujia Rong"
+                                <img src="/medias/images/avatar.png" alt="Yujia Rong"
                                      class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
@@ -537,7 +535,7 @@
                     </div>
                 </div>
 
-                <div class="introduction center-align" data-aos="fade-up">If you wish to succeed, you should use persistence as your good friend, experience as your reference, prudence as your brother and hope as your sentry.</div>
+                <div class="introduction center-align" data-aos="fade-up">Don&#39;t be encumbered by history, go ahead and do something wonderful. -Robert Noyce, founder of Intel</div>
 
                 <style type="text/css">
     #posts-chart,
@@ -725,33 +723,33 @@
                 <div class="info-title">
                     <a href="http://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
                 </div>
-                <div class="info-desc">This is a Hexo blog theme with &#39;Material Design&#39; and responsive design.</div>
+                <div class="info-desc">这是我的博客所采用的主题，博客本身基于Hexo框架搭建。这也是我第一次尝试动手搭建个人网站，收获颇丰。</div>
             </div>
         </div>
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/fenix" class="icon"
+                <a href="https://github.com/huangz1990/redis-3.0-annotated" class="icon"
                    style="background: linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)" target="_blank">
                     <i class="fas fa-database"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/fenix" target="_blank">Fenix</a>
+                    <a href="https://github.com/huangz1990/redis-3.0-annotated" target="_blank">Redis</a>
                 </div>
-                <div class="info-desc">这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。</div>
+                <div class="info-desc">读完黄建宏著作的《Redis设计与实现》后，我从该书的配套学习网站获取了Redis源代码，在结合源代码的阅读和调试中深化了对redis集群和容灾方案的理解。</div>
             </div>
         </div>
         
         <div class="col s12 m6 l4" data-aos="fade-up">
             <div class="info center-align">
-                <a href="https://github.com/blinkfox/typora-vue-theme" class="icon"
+                <a href="https://ruslanspivak.com/lsbasi-part1/" class="icon"
                    style="background: linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)" target="_blank">
-                    <i class="fas fa-file-alt"></i>
+                    <i class="fas fa-tasks"></i>
                 </a>
                 <div class="info-title">
-                    <a href="https://github.com/blinkfox/typora-vue-theme" target="_blank">typora-vue-theme</a>
+                    <a href="https://ruslanspivak.com/lsbasi-part1/" target="_blank">typora-vue-theme</a>
                 </div>
-                <div class="info-desc">This is a typora theme inspired by Vue document style.</div>
+                <div class="info-desc">这是一个关于动手编写简易编译器的实验项目，目前我还没有完成该项目，该项目是我接下来一段时间内的目标。</div>
             </div>
         </div>
         
@@ -774,10 +772,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 85%">
-                    <span>Java</span>
+                     style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 90%">
+                     <span>C 语言</span>
                 </div>
-                <div class="skill-bar-percent">85%</div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -785,10 +783,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 80%">
-                    <span>JavaScript</span>
+                     style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 50%">
+                     <span>C++</span>
                 </div>
-                <div class="skill-bar-percent">80%</div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -796,10 +794,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 80%">
-                    <span>HTML5</span>
+                     style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 40%">
+                     <span>java</span>
                 </div>
-                <div class="skill-bar-percent">80%</div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -807,10 +805,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                    <span>CSS</span>
+                     style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 20%">
+                     <span>python</span>
                 </div>
-                <div class="skill-bar-percent">70%</div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -818,10 +816,10 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 90%">
-                    <span>SQL</span>
+                     style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 70%">
+                     <span>Unix</span>
                 </div>
-                <div class="skill-bar-percent">90%</div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -829,10 +827,32 @@
         <div class="col s12 m6 l6" data-aos="fade-up">
             <div class="skillbar">
                 <div class="skillbar-title"
-                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                    <span>程序设计</span>
+                     style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 90%">
+                     <span>数据结构与算法</span>
                 </div>
-                <div class="skill-bar-percent">75%</div>
+                <div class="skill-bar-percent"></div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #8080ff 0%, #e5e5ff 100%); width: 90%">
+                     <span>Redis</span>
+                </div>
+                <div class="skill-bar-percent"></div>
+            </div>
+        </div>
+        
+        
+        <div class="col s12 m6 l6" data-aos="fade-up">
+            <div class="skillbar">
+                <div class="skillbar-title"
+                     style="background: linear-gradient(to right, #339933 0%, #9fdf9f 100%); width: 70%">
+                     <span>容灾恢复</span>
+                </div>
+                <div class="skill-bar-percent"></div>
             </div>
         </div>
         
@@ -882,20 +902,20 @@
         
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/images/UESTC.png">
+                <img src="/medias/images/UESTC.png" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/images/buddy1.png">
+                <img src="/medias/images/buddy1.png" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
-            <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+            <div class="img-item" data-src="/medias/images/Beijing.png">
+                <img src="/medias/images/Beijing.png" class="responsive-img">
             </div>
         </div>
         
@@ -1216,7 +1236,7 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura-half.js"><\/script>');
+                document.write('<script type="text/javascript" src="/libs/others/sakura-small.js"><\/script>');
             }
         </script>
     

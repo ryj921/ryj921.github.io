@@ -29,6 +29,33 @@
     
     
     <entry>
+      <title>Machine Learning &amp; Deep Learning</title>
+      <link href="/2023/02/19/Machine%20Learning%20&amp;%20Deep%20Learning/"/>
+      <url>/2023/02/19/Machine%20Learning%20&amp;%20Deep%20Learning/</url>
+      
+        <content type="html"><![CDATA[<h2 id="chapter-1-基础知识"><a href="#chapter-1-基础知识" class="headerlink" title="chapter 1. 基础知识"></a>chapter 1. 基础知识</h2><h3 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h3><p><strong>Machine Learning ≈ Looking for a Correct Function</strong><br>eg.语音识别：f(语音信号) = “How are you”<br>&emsp;&ensp;图像识别：f(图片) = “cat”<br>&emsp;&ensp;alpha Go：f(棋盘) = “下一步落子位置”<br><strong>f的正常编写会很困难，而机器学习就是帮我们找出：人写不出来的那个”复杂函数f”</strong></p><h3 id="什么是深度学习"><a href="#什么是深度学习" class="headerlink" title="什么是深度学习"></a>什么是深度学习</h3><p>要找的那个函数f是一个 <strong>“类神经网络”</strong></p><h3 id="机器学习的输入与输出"><a href="#机器学习的输入与输出" class="headerlink" title="机器学习的输入与输出"></a>机器学习的输入与输出</h3><p><strong>机器学习可以分为两大类任务，一类叫做regression，另一类叫做classificaton</strong><br>输入可以是一个vector、一个matrix（图片识别）或是一个sequence（语音辨识、翻译）<br>输出可以是一个数值scalar、一组类别或是更复杂的输出，如一篇文章等<br>输出是数值scalar的称为regression，即回归；例如数值预测；<br>输出是类别的，即为机器提供几个选项让他选择，称为分类classification；例如垃圾邮件识别，alpha-Go(所有落点选一个);</p><h3 id="机器如何自动的找出这个函数F"><a href="#机器如何自动的找出这个函数F" class="headerlink" title="机器如何自动的找出这个函数F"></a>机器如何自动的找出这个函数F</h3><p>Supervised Learning监督学习：在Training Data中设置label;缺点是要收集大量数据和设置标签，在实际中难以做到；<br>Self-supervised Learning自监督学习：在训练之前“先练成一些基本功”，即Pre-train预训练 + Downstream Tasks下游任务；<br>Pre-train和Downstream Tasks的关系就好像开发OS和开发APP的关系;<br>Pre-tarined Model也叫Foundation Model，其中最有名的就是BERT模型，有340个参数parameters（《芝麻街》中的小黄人）；此外还有：GPT-3、GPT-2、T5、ELMo；</p><h3 id="补充介绍"><a href="#补充介绍" class="headerlink" title="补充介绍"></a>补充介绍</h3><p><strong>generative adversarial network</strong>：将unpaired的数据输入让机器自己学习得出结果的一种技术；目前做的最好的是facebook的一篇论文：</p><blockquote><p><a href="https://arxiv.org/abs/2105.11084">https://arxiv.org/abs/2105.11084</a></p></blockquote><p><strong>reinforcement learning</strong>：强化学习，适用于难以打标签的场合；例如围棋，人很难知道下一步应该落在哪里是最好的，但我们可以告诉机器什么是好的结果，什么是不好的结果；<br><strong>anomaly detection</strong>：异常检测，让机器拥有回答”我不知道”的能力；<br><strong>explainable AI</strong>：可解释性AI，让机器不仅能输出结果，还要告诉我们为什么，以具有更好的可解释性；<br><strong>model attack</strong>:人类对训练模型的攻击；如插入杂讯；<br><strong>domain adaptation</strong>：域适应；针对实际接受的场景可能与训练场景有区别的情况；比如训练用的是黑白图片，实际变成彩色图片；<br><strong>network compression</strong>：模型压缩，从而让他们跑在更简单的设备上；例如手机、手表；<br><strong>life-long learning</strong>：让机器不断学习新技术会有什么困难？<br><strong>meta learning</strong>：meta learning = learn to learn，即让机器学会学习；meta learning往往用于实现<strong>Few-shot learning</strong>，即采用非常少量的资料让机器学会目标；</p><h3 id="prerequisite"><a href="#prerequisite" class="headerlink" title="prerequisite"></a>prerequisite</h3><p>python、google colab<br>colab全称为Colaboratory,是免费的Jupyter运行环境,并且完全在云端运行。最重要的是免费，而且不需要你自己去装深度学习的环境</p><h3 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h3><p><a href="https://www.kaggle.com">https://www.kaggle.com</a><br>一个机器学习的线上平台，包含了很多竞赛内容，部分竞赛甚至设有奖金；<br>项目做完后可以上传到kaggle上跑分，并获知排行；<br>public leaderboard在上传后就可以看到；包含一部分测试集；<br>private leaderboard要在deadline后；包含另一部分；</p><hr><h2 id="chapter-2-Regression"><a href="#chapter-2-Regression" class="headerlink" title="chapter 2. Regression"></a>chapter 2. Regression</h2><h3 id="什么是regression"><a href="#什么是regression" class="headerlink" title="什么是regression"></a>什么是regression</h3><p>the function outputs a scalar<br>例如，输入今天的气象参数到函数f，得出未来的pm2.5的值；</p><h3 id="Structured-Learning"><a href="#Structured-Learning" class="headerlink" title="Structured Learning"></a>Structured Learning</h3><p>即create something with structure(image、document)；用拟人化的方式来说，就是不只是让机器得出结果，还要让机器会创造。</p><h3 id="机器如何找出函数F（即训练过程）"><a href="#机器如何找出函数F（即训练过程）" class="headerlink" title="机器如何找出函数F（即训练过程）"></a>机器如何找出函数F（即训练过程）</h3><blockquote><p>“三步走”：</p><ol><li>写出一个带有未知参数的函数，即猜测一下我们需要预测的目标的数学关系式是什么样的。（eg.猜测明日油管播放量 y = b + wx，x是今日播放量，b 和 w 是未知数，w 可以表示权重 weight，b 可以表示 bias）这个带有未知参数的函数也称为<strong>模型</strong>。</li><li>定义Loss：Loss也是一个Function，此function的输入是model的参数（eg.对于上面的举例，Loss可以表示为L(b,w)）。Loss这个Function输出的值的意义是衡量当前参数的取值好还是不好。一般的，Loss越小，说明取的参数越好。<br><strong>Loss的计算方式</strong>：MAE(mean absolute error)、MSE(mean square error)等；<br>注意：Loss是可以根据实际场景去自己定义的。</li><li>Optimization最佳化；即找出最好的 $w^{<em>}$ 和 $b^{</em>}$，使得Loss取最小值。<br>一个最常用的optimize的方法就是Gradient Descent，即<strong>梯度下降法</strong>。<br><strong>梯度下降法的步骤</strong>：<br>I. 先随机取一个点$w_0$；<br>II. 然后计算 $\frac{\partial L}{\partial w}|_{w=w_0}$ ，如果为负，则增加w；如果为正，则减小w；<br>每次移动的值表示为 $\eta\frac{\partial L}{\partial w}|_{w=w_0}$ ；即偏微分越大，移动越多；$\eta$ 称为<strong>learning rate</strong>，即学习率，$\eta$ 越大每次跳的越多，反之越小。它的值是由我们自己去定义的。像 $\eta$ 这样由我们设定而非机器去学习得来的参数称为 <strong>hyperparameter</strong>；<br>III. 接下来更新 w，即 $w_1=w_0-\eta\frac{\partial L}{\partial w}|_{w=w_0}$<br><strong>思考：为什么是减？</strong> 原因是我们希望找最小的L，当偏导为负时要增加，偏导为正时要减小；联系梯度下降的概念，实际上梯度是当前函数增加最快的方向，则 <strong>负梯度方向是函数减少最快的方向。</strong><br>IV. 持续移动 w 直到结束；<strong>结束条件</strong>可以是更新次数上限(hyperparameter)、微分值为零的点(<strong>局部最优解local minima</strong>)；</li></ol></blockquote><h3 id="关于方向导数和梯度的数学补充"><a href="#关于方向导数和梯度的数学补充" class="headerlink" title="关于方向导数和梯度的数学补充"></a>关于方向导数和梯度的数学补充</h3><p>关于方向导数：<br><img src="/medias/blog/方向导数.png" alt="方向导数" title="方向导数"><br>关于梯度：<br><img src="/medias/blog/梯度.png" alt="梯度" title="梯度"><br>多参数问题用Gradient Decent:<br><img src="/medias/blog/gradient_decent.png" alt="Gradient Decent" title="Gradient Decent"><br>实例：<br><img src="/medias/blog/梯度下降实例.png" alt="实例" title="Gradient 梯度下降"></p><h3 id="模型修改"><a href="#模型修改" class="headerlink" title="模型修改"></a>模型修改</h3><p><strong>对模型的修改往往源于对于问题实际情况的深入理解，即Domain Knowledge</strong><br>一般来讲，在训练数据上考虑因素越多，在训练集上的Loss越小。例如，预测播放量中考虑前一天和考虑前七天的差异。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Machine Learning </tag>
+            
+            <tag> Deep Learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Automata</title>
       <link href="/2023/02/19/Automata/"/>
       <url>/2023/02/19/Automata/</url>
@@ -50,33 +77,6 @@
             <tag> Trie </tag>
             
             <tag> AC自动机 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Machine Learning &amp; Deep Learning</title>
-      <link href="/2023/02/19/Machine%20Learning%20&amp;%20Deep%20Learning/"/>
-      <url>/2023/02/19/Machine%20Learning%20&amp;%20Deep%20Learning/</url>
-      
-        <content type="html"><![CDATA[<h2 id="chapter-1-基础知识"><a href="#chapter-1-基础知识" class="headerlink" title="chapter 1. 基础知识"></a>chapter 1. 基础知识</h2><h3 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习"></a>什么是机器学习</h3><p><strong>Machine Learning ≈ Looking for a Correct Function</strong><br>eg.语音识别：f(语音信号) = “How are you”<br>&emsp;&ensp;图像识别：f(图片) = “cat”<br>&emsp;&ensp;alpha Go：f(棋盘) = “下一步落子位置”<br><strong>f的正常编写会很困难，而机器学习就是帮我们找出：人写不出来的那个”复杂函数f”</strong></p><h3 id="什么是深度学习"><a href="#什么是深度学习" class="headerlink" title="什么是深度学习"></a>什么是深度学习</h3><p>要找的那个函数f是一个 <strong>“类神经网络”</strong></p><h3 id="机器学习的输入与输出"><a href="#机器学习的输入与输出" class="headerlink" title="机器学习的输入与输出"></a>机器学习的输入与输出</h3><p><strong>机器学习可以分为两大类任务，一类叫做regression，另一类叫做classificaton</strong><br>输入可以是一个vector、一个matrix（图片识别）或是一个sequence（语音辨识、翻译）<br>输出可以是一个数值scalar、一组类别或是更复杂的输出，如一篇文章等<br>输出是数值scalar的称为regression，即回归；例如数值预测；<br>输出是类别的，即为机器提供几个选项让他选择，称为分类classification；例如垃圾邮件识别，alpha-Go(所有落点选一个);</p><h3 id="机器如何自动的找出这个函数F"><a href="#机器如何自动的找出这个函数F" class="headerlink" title="机器如何自动的找出这个函数F"></a>机器如何自动的找出这个函数F</h3><p>Supervised Learning监督学习：在Training Data中设置label;缺点是要收集大量数据和设置标签，在实际中难以做到；<br>Self-supervised Learning自监督学习：在训练之前“先练成一些基本功”，即Pre-train预训练 + Downstream Tasks下游任务；<br>Pre-train和Downstream Tasks的关系就好像开发OS和开发APP的关系;<br>Pre-tarined Model也叫Foundation Model，其中最有名的就是BERT模型，有340个参数parameters（《芝麻街》中的小黄人）；此外还有：GPT-3、GPT-2、T5、ELMo；</p><h3 id="补充介绍"><a href="#补充介绍" class="headerlink" title="补充介绍"></a>补充介绍</h3><p><strong>generative adversarial network</strong>：将unpaired的数据输入让机器自己学习得出结果的一种技术；目前做的最好的是facebook的一篇论文：</p><blockquote><p><a href="https://arxiv.org/abs/2105.11084">https://arxiv.org/abs/2105.11084</a></p></blockquote><p><strong>reinforcement learning</strong>：强化学习，适用于难以打标签的场合；例如围棋，人很难知道下一步应该落在哪里是最好的，但我们可以告诉机器什么是好的结果，什么是不好的结果；<br><strong>anomaly detection</strong>：异常检测，让机器拥有回答”我不知道”的能力；<br><strong>explainable AI</strong>：可解释性AI，让机器不仅能输出结果，还要告诉我们为什么，以具有更好的可解释性；<br><strong>model attack</strong>:人类对训练模型的攻击；如插入杂讯；<br><strong>domain adaptation</strong>：域适应；针对实际接受的场景可能与训练场景有区别的情况；比如训练用的是黑白图片，实际变成彩色图片；<br><strong>network compression</strong>：模型压缩，从而让他们跑在更简单的设备上；例如手机、手表；<br><strong>life-long learning</strong>：让机器不断学习新技术会有什么困难？<br><strong>meta learning</strong>：meta learning = learn to learn，即让机器学会学习；meta learning往往用于实现<strong>Few-shot learning</strong>，即采用非常少量的资料让机器学会目标；</p><h3 id="prerequisite"><a href="#prerequisite" class="headerlink" title="prerequisite"></a>prerequisite</h3><p>python、google colab<br>colab全称为Colaboratory,是免费的Jupyter运行环境,并且完全在云端运行。最重要的是免费，而且不需要你自己去装深度学习的环境</p><h3 id="Kaggle"><a href="#Kaggle" class="headerlink" title="Kaggle"></a>Kaggle</h3><p><a href="https://www.kaggle.com">https://www.kaggle.com</a><br>一个机器学习的线上平台，包含了很多竞赛内容，部分竞赛甚至设有奖金；<br>项目做完后可以上传到kaggle上跑分，并获知排行；<br>public leaderboard在上传后就可以看到；包含一部分测试集；<br>private leaderboard要在deadline后；包含另一部分；</p><hr><h2 id="chapter-2-Regression"><a href="#chapter-2-Regression" class="headerlink" title="chapter 2. Regression"></a>chapter 2. Regression</h2><h3 id="什么是regression"><a href="#什么是regression" class="headerlink" title="什么是regression"></a>什么是regression</h3><p>the function outputs a scalar<br>例如，输入今天的气象参数到函数f，得出未来的pm2.5的值；</p><h3 id="Structured-Learning"><a href="#Structured-Learning" class="headerlink" title="Structured Learning"></a>Structured Learning</h3><p>即create something with structure(image、document)；用拟人化的方式来说，就是不只是让机器得出结果，还要让机器会创造。</p><h3 id="机器如何找出函数F（即训练过程）"><a href="#机器如何找出函数F（即训练过程）" class="headerlink" title="机器如何找出函数F（即训练过程）"></a>机器如何找出函数F（即训练过程）</h3><blockquote><p>“三步走”：</p><ol><li>写出一个带有未知参数的函数，即猜测一下我们需要预测的目标的数学关系式是什么样的。（eg.猜测明日油管播放量 y = b + wx，x是今日播放量，b 和 w 是未知数，w 可以表示权重 weight，b 可以表示 bias）这个带有未知参数的函数也称为<strong>模型</strong>。</li><li>定义Loss：Loss也是一个Function，此function的输入是model的参数（eg.对于上面的举例，Loss可以表示为L(b,w)）。Loss这个Function输出的值的意义是衡量当前参数的取值好还是不好。一般的，Loss越小，说明取的参数越好。<br><strong>Loss的计算方式</strong>：MAE(mean absolute error)、MSE(mean square error)等；<br>注意：Loss是可以根据实际场景去自己定义的。</li><li>Optimization最佳化；即找出最好的 $w^{<em>}$ 和 $b^{</em>}$，使得Loss取最小值。<br>一个最常用的optimize的方法就是Gradient Descent，即<strong>梯度下降法</strong>。<br><strong>梯度下降法的步骤</strong>：<br>I. 先随机取一个点$w_0$；<br>II. 然后计算 $\frac{\partial L}{\partial w}|_{w=w_0}$ ，如果为负，则增加w；如果为正，则减小w；<br>每次移动的值表示为 $\eta\frac{\partial L}{\partial w}|_{w=w_0}$ ；即偏微分越大，移动越多；$\eta$ 称为<strong>learning rate</strong>，即学习率，$\eta$ 越大每次跳的越多，反之越小。它的值是由我们自己去定义的。像 $\eta$ 这样由我们设定而非机器去学习得来的参数称为 <strong>hyperparameter</strong>；<br>III. 接下来更新 w，即 $w_1=w_0-\eta\frac{\partial L}{\partial w}|_{w=w_0}$<br><strong>思考：为什么是减？</strong> 原因是我们希望找最小的L，当偏导为负时要增加，偏导为正时要减小；联系梯度下降的概念，实际上梯度是当前函数增加最快的方向，则 <strong>负梯度方向是函数减少最快的方向。</strong><br>IV. 持续移动 w 直到结束；<strong>结束条件</strong>可以是更新次数上限(hyperparameter)、微分值为零的点(<strong>局部最优解local minima</strong>)；</li></ol></blockquote><h3 id="关于方向导数和梯度的数学补充"><a href="#关于方向导数和梯度的数学补充" class="headerlink" title="关于方向导数和梯度的数学补充"></a>关于方向导数和梯度的数学补充</h3><p>关于方向导数：<br><img src="/medias/blog/方向导数.png" alt="方向导数" title="方向导数"><br>关于梯度：<br><img src="/medias/blog/梯度.png" alt="梯度" title="梯度"><br>多参数问题用Gradient Decent:<br><img src="/medias/blog/gradient_decent.png" alt="Gradient Decent" title="Gradient Decent"><br>实例：<br><img src="/medias/blog/梯度下降实例.png" alt="实例" title="Gradient 梯度下降"></p><h3 id="模型修改"><a href="#模型修改" class="headerlink" title="模型修改"></a>模型修改</h3><p><strong>对模型的修改往往源于对于问题实际情况的深入理解，即Domain Knowledge</strong><br>一般来讲，在训练数据上考虑因素越多，在训练集上的Loss越小。例如，预测播放量中考虑前一天和考虑前七天的差异。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> study </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Machine Learning </tag>
-            
-            <tag> Deep Learning </tag>
             
         </tags>
       
